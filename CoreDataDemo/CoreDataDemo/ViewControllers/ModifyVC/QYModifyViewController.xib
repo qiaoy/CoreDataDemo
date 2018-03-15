@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QYModifyViewController">
+            <connections>
+                <outlet property="desTextTextField" destination="2hv-bn-wos" id="0I9-lX-EJd"/>
+                <outlet property="titleTextField" destination="S5h-DO-9Yb" id="iZv-YH-DyL"/>
+                <outlet property="view" destination="yIt-CQ-6w8" id="UQV-nN-eIW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="QYModifyViewController" id="yIt-CQ-6w8">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="785-6U-DTf">
+                    <rect key="frame" x="40" y="158" width="296" height="134"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOn-9d-j9Q">
+                            <rect key="frame" x="48" y="18" width="46" height="25"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5h-DO-9Yb">
+                            <rect key="frame" x="101" y="15" width="182" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hv-bn-wos">
+                            <rect key="frame" x="101" y="84" width="182" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="desText：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rh-9m-aoN">
+                            <rect key="frame" x="18" y="84" width="77" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="296" id="XtR-pU-sBX"/>
+                        <constraint firstAttribute="height" constant="134" id="ZNR-K8-n11"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuU-vZ-e33">
+                    <rect key="frame" x="92" y="495" width="191" height="38"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="iYF-5S-BgE"/>
+                        <constraint firstAttribute="width" constant="191" id="sTn-8d-meU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="done:" destination="-1" eventType="touchUpInside" id="0sC-Ui-1tR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="RuU-vZ-e33" firstAttribute="centerX" secondItem="DZe-UP-i2c" secondAttribute="centerX" id="79S-xc-aZV"/>
+                <constraint firstItem="785-6U-DTf" firstAttribute="top" secondItem="DZe-UP-i2c" secondAttribute="top" constant="138" id="HT4-Ma-bfL"/>
+                <constraint firstItem="DZe-UP-i2c" firstAttribute="trailing" secondItem="785-6U-DTf" secondAttribute="trailing" priority="750" constant="39" id="WZg-lg-jC5"/>
+                <constraint firstItem="DZe-UP-i2c" firstAttribute="bottom" secondItem="RuU-vZ-e33" secondAttribute="bottom" constant="134" id="a46-HC-vdp"/>
+                <constraint firstItem="785-6U-DTf" firstAttribute="centerX" secondItem="DZe-UP-i2c" secondAttribute="centerX" id="bTC-W2-cxp"/>
+                <constraint firstItem="785-6U-DTf" firstAttribute="leading" secondItem="DZe-UP-i2c" secondAttribute="leading" priority="750" constant="40" id="bxb-9A-akm"/>
+                <constraint firstItem="RuU-vZ-e33" firstAttribute="top" secondItem="785-6U-DTf" secondAttribute="bottom" priority="750" constant="203" id="gBE-9R-7M4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="DZe-UP-i2c"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="lBf-pO-fSA" appends="YES" id="QnF-aU-xvn"/>
+            </connections>
+            <point key="canvasLocation" x="-153.5" y="24.5"/>
+        </view>
+        <tapGestureRecognizer id="lBf-pO-fSA">
+            <connections>
+                <action selector="hideKeyBoard:" destination="-1" id="LeF-Zd-y2q"/>
+                <outlet property="delegate" destination="yIt-CQ-6w8" id="bFL-Qu-zMa"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

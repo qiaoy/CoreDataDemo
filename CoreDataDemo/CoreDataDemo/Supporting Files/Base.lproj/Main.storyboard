@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="otK-7M-8ZR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QYHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="kHomePageCellID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ckV-ka-7ju">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="f9J-zC-EOy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bvq-h7-S79"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NvD-5o-wGl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4w0-07-DDn"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ckV-ka-7ju" firstAttribute="top" secondItem="NvD-5o-wGl" secondAttribute="bottom" id="2N7-5k-ljC"/>
+                            <constraint firstItem="ckV-ka-7ju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7PW-cM-WGC"/>
+                            <constraint firstItem="ckV-ka-7ju" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DFf-ga-Few"/>
+                            <constraint firstItem="NvD-5o-wGl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZTZ-CH-czg"/>
+                            <constraint firstItem="ckV-ka-7ju" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZeI-k1-Nxh"/>
+                            <constraint firstItem="NvD-5o-wGl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iNc-WS-yLj"/>
+                            <constraint firstItem="NvD-5o-wGl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lne-4U-6sU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="aeC-y0-06T">
+                        <barButtonItem key="rightBarButtonItem" title="Add" width="43" style="done" id="bgn-DQ-cbR">
+                            <inset key="imageInsets" minX="15" minY="0.0" maxX="40" maxY="0.0"/>
+                            <inset key="landscapeImageInsets" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
+                            <inset key="largeContentSizeImageInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <action selector="addItem:" destination="BYZ-38-t0r" id="MRh-fx-Fm4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="iQd-sT-ID1" id="JdS-xe-8Uj"/>
+                        <outlet property="tableView" destination="ckV-ka-7ju" id="5Fc-7f-fiT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="iQd-sT-ID1">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="M4B-Zz-fgU"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="52C-H7-91Y"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="PZT-4l-suk"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="P5t-IY-yS4"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="605.60000000000002" y="38.23088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HI7-RY-jFi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="otK-7M-8ZR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wDc-uO-qZw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ET0-ao-4vH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zk3-Zt-vLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235.19999999999999" y="55.772113943028494"/>
+        </scene>
+    </scenes>
+</document>
